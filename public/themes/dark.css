@@ -1,0 +1,95 @@
+* {
+  color: #f5f7fa;
+}
+path {
+  fill: #f5f7fa;
+}
+select {
+  background-color: #333;
+}
+
+/* STYLES */
+body {
+  background-color: #1f2933;
+}
+.handles {
+ background-color: #323f4b;
+}
+#input-container {
+ background-color: #323f4b;
+}
+#settings {
+ background-color: #0e161d;
+}
+#settings input {
+  background-color: #323f4b;
+}
+.button-one {
+ background-color: rgb(98, 255, 247);
+ color: #333;
+}
+
+/* FRONTPAGE */
+#welcome h1 {
+ background-image: linear-gradient(135deg, rgb(66, 201, 255), rgb(129, 255, 186));
+ -webkit-background-clip: text;
+ background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+#discover .item {
+ background-color: #323f4b;
+}
+#discover p {
+ color: #ddd;
+}
+#tags {
+  background-color: #1f2933;
+  border: 1px solid #090f14;
+}
+#tags > input::placeholder {
+ color: #ccc;
+}
+.tag {
+  background-color: rgb(5, 114, 177);
+}
+.tag:hover {
+  background-color: rgb(36, 133, 189);
+}
+#random-button {
+ border: 1px solid rgb(98, 255, 247);
+ color: rgb(95, 255, 247);
+}
+#random-button:hover {
+ background-color: rgb(98, 255, 247);
+ color: #333;
+}
+.group {
+  background-color: #42515f;
+}
+.group:hover {
+  background-color: #323f4b;
+}
+#create-group-container {
+  background-color: #42515f;
+}
+
+/* MESSAGES */
+.nick {
+  color: rgb(177, 177, 177);
+}
+.message:hover {
+  background-color: #182029;
+}
+.warn {
+  color: rgb(255, 136, 115);
+}
+.info {
+  color: rgb(153, 235, 255);
+}
+.me {
+  color: rgb(45, 189, 165);
+}
+.billboard {
+  background-color: rgb(58, 58, 58);
+  border: 1px solid #fff;
+}

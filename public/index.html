@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyelo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link id="theme" rel="stylesheet" href="">
+</head>
+<body>
+<div id="app">
+  <div id="logo" class="handles"><img src="img/logo.svg"></div>
+  <div id="settings-button" class="handles">
+    <svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 1024 1024">
+      <path d="M596.094+18.8125L392.219+21C382.809+20.316+371.181+29.7462+369.875+47.7188L360.875+171.781C331.702+187.728+304.933+205.609+275.094+230.719L156.156+185.25C146.747+184.566+128.949+174.991+126.594+191.594L32.4062+366.125C22.3309+374.604+29.6219+394.254+39.0312+394.938L144.562+464.969L140.656+518.531C139.35+536.504+146.556+557.59+145.25+575.562L38.1875+647.125C28.1121+655.604+27.3972+665.125+35.5+683.781L145.219+856.125C153.962+865.972+163.793+865.971+182.25+867.312L296.781+813.312C323.341+833.311+358.925+853.968+386.125+865.156L406.062+991.281C405.396+1000.44+421.278+1012.22+430.688+1012.91L637.688+1008.12C647.097+1008.81+655.6+1002+656.906+984.031L666.125+857.156C695.298+841.209+724.755+826.328+754.594+801.219L870.844+843.688C880.253+844.372+899.74+846.506+900.406+837.344L997.5+663C1007.58+654.522+1000.07+637.684+990.656+637L882.438+563.969L886.344+510.406C887.65+492.434+880.256+474.16+881.562+456.188L988.812+381.812C998.888+373.334+999.603+363.813+991.5+345.156L884.469+175.844C875.725+165.997+866.113+163.154+847.656+161.812L730.031+218.438C703.471+198.439+667.857+177.782+640.656+166.594L623.812+37.8438C624.479+28.6813+605.503+19.4965+596.094+18.8125ZM512.719+329.125C616.194+329.125+700.094+413.025+700.094+516.5C700.094+619.975+616.194+703.844+512.719+703.844C409.243+703.844+325.375+619.975+325.375+516.5C325.375+413.025+409.243+329.125+512.719+329.125Z" opacity="1" fill="#000000"/>
+    </svg>
+      
+  </div>
+  <div id="settings">
+    <h3>Nickname</h3>
+    <input id="nick-input" type="text" placeholder="nickname">
+    <button id="change-nick" class="button-one">Change</button>
+    <h3>Theme</h3>
+    <select id="theme-select">
+    </select>
+  </div>
+  <div class="container">
+    <div id="content">
+      
+    </div>
+    <div id="input-container">
+      <textarea id="input" type="text" autocomplete="off" autofocus></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- HOMEPAGE -->
+<template id="homepage-template">
+  <div id="welcome">
+    <h1>Hyelo</h1>
+  </div>
+  <div id="discover">
+    <div class="item">
+      <h2>Random Chat</h2>
+      <p>Talk with a random stranger.</p>
+      <h3>Tags</h3>
+      <div id="tags">
+        <input id="tags-input" type="text" placeholder="e.g. 'Music' 'Cats'">
+      </div>
+      <button id="random-button">
+        Start
+      </button>
+    </div>
+    <div class="item">
+      <h2>Group Chat</h2>
+      <p>Enter the room you want to join. If a room can't be found with that name, one will be created for you.</p>
+      <div id="create-group-container">
+        <input id="group-input" placeholder="group name">
+        <button id="group-button" class="button-one">Join</button>
+      </div>
+      <p>Tip: Keep this a secret for a private room.</p>
+
+      <h3>General Groups</h3>
+      <p>Here are some premade rooms for you to check out.</p>
+      <div id="general-groups">
+        <a href="?general" class="group">
+          general
+        </a>
+        <a href="?lost-partners" class="group">
+          lost-partners
+        </a>
+        <a href="?developers" class="group">
+          developers
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- CHATROOM -->
+<template id="chatroom-template">
+  <div id="messages">
+  </div>
+</template>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

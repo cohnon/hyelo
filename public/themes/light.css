@@ -1,0 +1,99 @@
+* {
+  color: #333;
+}
+path {
+  fill: #333;
+}
+
+
+
+/* STYLES */
+body {
+   background-color: #f0f3f7;
+}
+.handles {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+#input-container {
+  background-color: #fff;
+}
+#settings {
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid #ddd;
+}
+#settings input {
+  border: 1px solid #eee;
+}
+.button-one {
+  background-color: rgb(49, 230, 220);
+  color: #fff;
+}
+
+/* FRONTPAGE */
+#welcome h1 {
+  background-image: linear-gradient(135deg, rgb(66, 201, 255), rgb(129, 255, 186));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#discover .item {
+  background-color: #fff;
+}
+#discover p {
+  color: #555;
+}
+#tags {
+  border: 1px solid #eee;
+}
+#tags > input::placeholder {
+  color: #ccc;
+}
+.tag {
+  background-color: rgb(25, 218, 218);
+  color: #fff;
+}
+.tag:hover {
+  background-color: rgb(4, 184, 184);
+}
+#random-button {
+  border: 1px solid rgb(49, 230, 220);
+  color: rgb(19, 170, 163);
+}
+#random-button:hover {
+  background-color: rgb(49, 230, 220);
+  color: #fff;
+}
+.group {
+  border: 1px solid #eee;
+}
+.group:hover {
+  background-color: #eee;
+}
+#create-group-container {
+  border: 1px solid #eee;
+}
+
+/* MESSAGES */
+.nick {
+  color: rgb(82, 82, 82);
+}
+.message:hover {
+  background-color: rgb(213, 214, 223);
+}
+.warn {
+  color: rgb(255, 131, 59);
+}
+.info {
+  color: rgb(27, 126, 255);
+}
+.me {
+  color: rgb(45, 189, 165);
+}
+.billboard {
+  background-color: rgb(223, 223, 223);
+  border: 1px solid #333;
+}
+.invite {
+  background-color: blue;
+}

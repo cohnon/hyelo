@@ -1,0 +1,11 @@
+{
+  "name": "hyelo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && npm start"
+  },
+  "author": "",
+  "license": "ISC"
+}
