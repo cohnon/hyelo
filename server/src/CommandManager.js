@@ -159,7 +159,7 @@ const commands = {
     {
       websocket.send(socket, {
         cmd: 'info',
-        msg: `You are the only one here. Invite others with http://localhost:8080/?${roomId}`,
+        msg: `You are the only one here. Invite others with https://hyelo.herokuapp.com/?${roomId}`,
       });
     }
     else

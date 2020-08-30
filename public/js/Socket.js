@@ -8,8 +8,7 @@ class Socket
 
   connect()
   {
-    this.ws = new WebSocket(`ws://${location.host}`);
-    this.ws.O
+    this.ws = new WebSocket(`wss://${location.host}`);
     this.ws.onopen = () => {
       this.app.onLoad(window.location.search.replace(/^\?/, ''));
     };
