@@ -12,6 +12,10 @@ class CommandManager
       this.app.messageManager.systemMessage('That is an invalid command. Type \'/help\' for a list of commands.');
       return;
     }
+    if (!Array.isArray(data))
+    {
+      data = [data];
+    }
     commands[command].execute(this.app, data);
   }
 

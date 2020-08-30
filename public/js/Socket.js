@@ -8,7 +8,8 @@ class Socket
 
   connect()
   {
-    this.ws = new WebSocket(`wss://${location.host}`);
+    const protocol = location.protocol === 'https:' ? 'wss:' : 'ws:'
+    this.ws = new WebSocket(`${protocol}//${location.host}`);
     this.ws.onopen = () => {
       this.app.onLoad(window.location.search.replace(/^\?/, ''));
     };
