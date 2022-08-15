@@ -17,11 +17,9 @@ export function loadSidebar(app)
   themeSelectHTML.value = currentTheme;
 
   themeSelectHTML.onchange = (e) => {
-    localStorage.setItem('theme', e.target.value);
-    themeHTML.href = `themes/${e.target.value}.css`
+    updateTheme(e.target.value);
   }
 
-  
   changeNickHTML.addEventListener('click', () => {
     app.commandManager.handle('nick', nickInputHTML.value);
   });
@@ -29,7 +27,17 @@ export function loadSidebar(app)
 
 export function updateNick(nick)
 {
-  nickInputHTML.value += nick;
+  nickInputHTML.value = nick;
+}
+
+export function updateTheme(theme)
+{
+  console.log(theme)
+  if (themes.indexOf(theme) !== -1)
+  {
+    localStorage.setItem('theme',theme);
+    themeHTML.href = `themes/${theme}.css`;
+  }
 }
 
 export function updateRoomInfo(room_id)

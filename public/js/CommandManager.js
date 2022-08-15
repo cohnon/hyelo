@@ -38,7 +38,7 @@ const commands = {
       let message = '__List of commands__\n';
       for (const command in commands)
       {
-        if (commands[command].level != -1)
+        if (!!commands[command].description)
         {
           message += `${command}: ${commands[command].description}\n`
         }
@@ -58,6 +58,18 @@ const commands = {
       }
       app.changeNick(nick);
       app.messageManager.systemMessage(`You changed your nickname to ${app.nick}.`);
+      app.socket.emit({ cmd: 'nick', nick: app.nick });
+    },
+  },
+  theme: {
+    description: 'Changes the colour theme. /theme <new_theme>',
+    execute: (app, data) =>
+    {
+      const theme = data[0];
+      if (!theme) return
+
+      app.changeTheme(theme);
+      app.messageManager.systemMessage(`You changed the theme to ${theme}.`);
       app.socket.emit({ cmd: 'nick', nick: app.nick });
     },
   },

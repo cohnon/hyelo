@@ -196,7 +196,8 @@ class MessageManager
     const bottom = this.isAtBottom();
     this.messagesHTML.appendChild(newMessageHTML);
     
-    if (bottom) {
+    if (bottom || message.cmd === 'me') {
+      console.log("SCREOOLLL")
       this.messagesHTML.scrollTo(0, this.messagesHTML.scrollHeight);
     }
   }

@@ -2,7 +2,7 @@ import CommandManager from './CommandManager.js';
 import MessageManager from './MessageManager.js';
 import Socket from './Socket.js';
 import { load } from './homepage.js';
-import { loadSidebar, updateNick } from './sidebar.js';
+import { loadSidebar, updateNick, updateTheme } from './sidebar.js';
 
 class ChatApp
 {
@@ -70,6 +70,11 @@ class ChatApp
       localStorage.setItem('nick', this.nick);
     }
     updateNick(this.nick);
+  }
+
+  changeTheme(new_theme)
+  {
+    updateTheme(new_theme);
   }
 
   onLoad(room_id)
