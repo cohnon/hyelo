@@ -17,7 +17,7 @@ body {
 }
 #input-container {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(155, 155, 155);
 }
 #settings {
   background-color: rgb(255, 255, 255);
