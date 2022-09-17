@@ -51,12 +51,12 @@ const commands = {
     execute: (app, data) =>
     {
       const nick = data[0];
+      app.changeNick(nick);
       if (!nick || nick === app.nick)
       {
         app.messageManager.systemMessage(`Your name is already ${app.nick}.`);
         return;
       }
-      app.changeNick(nick);
       app.messageManager.systemMessage(`You changed your nickname to ${app.nick}.`);
       app.socket.emit({ cmd: 'nick', nick: app.nick });
     },

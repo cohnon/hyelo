@@ -193,7 +193,7 @@ const commands = {
 
   nick: (_app, _websocket, socket, data) => {
     let new_nick = data.nick;
-    if (!new_nick)
+    if (typeof new_nick !== 'string' || new_nick.length < 1)
     {
       return;
     }

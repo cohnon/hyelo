@@ -34,6 +34,7 @@ class ChatApp
     this.in_random = false;
     this.room_id = null;
 
+    this.changeNick("Stranger");
     loadSidebar(this);
   }
 
@@ -60,6 +61,9 @@ class ChatApp
 
   changeNick(new_nick)
   {
+    if (!new_nick || new_nick.length < 1) {
+      new_nick = "Stranger";
+    }
     new_nick = new_nick.trim().substring(0, 20);
     this.nick = new_nick;
     if (new_nick === 'Stranger')
