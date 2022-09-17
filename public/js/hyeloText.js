@@ -4,6 +4,7 @@
 
 export function renderText(text)
 {
+  text = text || "Someone";
   return text
   .replace(/</g, "&lt;") // <
   .replace(/>/g, "&gt;") // >

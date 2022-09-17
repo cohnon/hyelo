@@ -197,7 +197,6 @@ class MessageManager
     this.messagesHTML.appendChild(newMessageHTML);
     
     if (bottom || message.cmd === 'me') {
-      console.log("SCREOOLLL")
       this.messagesHTML.scrollTo(0, this.messagesHTML.scrollHeight);
     }
   }
