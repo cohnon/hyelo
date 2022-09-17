@@ -48,6 +48,7 @@ class ChatApp
     if (route === 'homepage')
     {
       this.room_open = false;
+      history.replaceState(null, null, '/');
       load(this);
     }
     else if (route === 'chatroom')
@@ -82,19 +83,20 @@ class ChatApp
     if (!room_id)
     {
       this.changeRoute('homepage');
+      history.replaceState(null, null, '/');
     }
     const new_nick = localStorage.getItem('nick') || 'Stranger';
     if (new_nick !== 'Stranger')
     {
-      this.commandManager.handle('nick', new_nick);
+      this.commandManager.handle('nickz', new_nick);
     }
     else
     {
       this.changeNick('Stranger');
     }
     this.commandManager.handle('join', room_id);
-    history.replaceState(null, null, '/');
   }
 }
 
 export default ChatApp;
+
