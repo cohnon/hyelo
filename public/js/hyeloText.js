@@ -11,7 +11,9 @@ export function renderText(text)
   .replace(/```([^\n]*)\n([^`]*)```/, '<div class="billboard $1">$2</div>')
   .replace(/(http|https):\/\/(\S*)/, '<a href=$1://$2>$1://$2</a>')
   .replace(/(?:^|[^\S])\?([^\s]*)/, '<a href="?$1">?$1</div>')
-  .replace(/\n/g, '<br>')
+  .concat("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+  .split('\n').slice(0, 15).join('\n')
+  .replace(/\n+/g, '<br>')
 }
 
 function isURL(str) {
@@ -23,10 +25,10 @@ function isURL(str) {
 export function renderTime(time)
 {
   const date = new Date(time);
-  const hours = numString(date.getHours());
+  const hours = numString((date.getHours() === 0 ? 12 : date.getHours() - 1) % 12 + 1);
   const minutes = numString(date.getMinutes());
-  const seconds = numString(date.getSeconds());
-  return `${hours}:${minutes}:${seconds}`;
+  const amOrPm = date.getHours() >= 12 ? 'pm' : 'am';
+  return `${hours}:${minutes}${amOrPm}`;
 }
 
 function numString(value)

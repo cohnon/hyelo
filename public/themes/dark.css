@@ -52,9 +52,6 @@ body {
 .tag {
   background-color: rgb(5, 114, 177);
 }
-.tag:hover {
-  background-color: rgb(36, 133, 189);
-}
 #random-button {
  border: 1px solid rgb(98, 255, 247);
  color: rgb(95, 255, 247);
@@ -74,12 +71,13 @@ body {
 }
 
 /* MESSAGES */
+.message {
+  border-bottom: 1px solid #314050;
+}
 .nick {
   color: rgb(177, 177, 177);
 }
-.message:hover {
-  background-color: #182029;
-}
+
 .warn {
   color: rgb(255, 136, 115);
 }
@@ -92,4 +90,20 @@ body {
 .billboard {
   background-color: rgb(58, 58, 58);
   border: 1px solid #fff;
+}
+
+@media (min-width: 850px) {
+
+.tag:hover {
+  background-color: rgb(36, 133, 189);
+}
+
+/* .message {
+  border: none;
+} */
+
+.message:hover {
+  background-color: #182029;
+}
+
 }

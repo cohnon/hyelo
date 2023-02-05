@@ -77,11 +77,11 @@ body {
 }
 
 /* MESSAGES */
+#messages {
+  background-color: #fff;
+}
 .nick {
   color: rgb(82, 82, 82);
-}
-.message:hover {
-  background-color: rgb(213, 214, 223);
 }
 .warn {
   color: rgb(255, 131, 59);
@@ -94,4 +94,13 @@ body {
 }
 .invite {
   background-color: blue;
+}
+
+@media (min-width: 850px) {
+  #messages {
+    border: 1px solid rgb(155, 155, 155);
+  }
+  .message:hover {
+    background-color: rgb(213, 214, 223);
+  }
 }

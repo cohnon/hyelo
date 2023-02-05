@@ -1,7 +1,6 @@
 const themeHTML = document.getElementById('theme');
 const themeSelectHTML = document.getElementById('theme-select');
 const themes = ['light', 'dark', 'contrast'];
-const changeNickHTML = document.getElementById('change-nick');
 const nickInputHTML = document.getElementById('nick-input');
 
 export function loadSidebar(app)
@@ -20,7 +19,7 @@ export function loadSidebar(app)
     updateTheme(e.target.value);
   }
 
-  changeNickHTML.addEventListener('click', () => {
+  nickInputHTML.addEventListener('blur', () => {
     app.commandManager.handle('nick', nickInputHTML.value);
   });
 }
