@@ -9,7 +9,8 @@ export function renderText(text)
   .replace(/</g, "&lt;") // <
   .replace(/>/g, "&gt;") // >
   .replace(/```([^\n]*)\n([^`]*)```/, '<div class="billboard $1">$2</div>')
-  .replace(/(http|https):\/\/(\S*)/, '<a href=$1://$2>$1://$2</a>')
+  .replace(/(https:\/\/)*(www.)*youtube.com\/watch\?v=([a-zA-Z0-9]+)/, '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/$3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+  .replace(/(http|https):\/\/(?!\S*youtube)(\S*)/, '<a href=$1://$2>$1://$2</a>')
   .replace(/(?:^|[^\S])\?([^\s]*)/, '<a href="?$1">?$1</div>')
   .concat("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
   .split('\n').slice(0, 15).join('\n')
